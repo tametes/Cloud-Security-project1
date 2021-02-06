@@ -1,16 +1,23 @@
 # Cloud-Security
-# Cloud-Security
 
 This is an ELK monitoring stack within your virtual networks. This will allow us to monitor the performance of their Web server that is running DVWA. In particular, the ELK stack allows analysts to: Easily collect logs from multiple machines into a single database. Quickly execute complex searches, such as: Find the 12 internal IP addresses that sent the most HTTP traffic to my gateway between 4 a.m. and 8 a.m. in April 2020. Build graphs, charts, and other visualizations from network data. It is a fully functional monitoring solution that lives on the cloud.
 
 ## Automated ELK Stack Deployment
 The configuration details of each machine may be found below.
 
+
+
+
 Name	    Function	    IP Address	Operating System
 Jump Box	 Gateway	    10.0.0.4	Linux
 DVWA 1	  Web Server  	10.0.0.5	Linux
 DVWA 2	 Web Server	    10.0.0.6	Linux
 ELK	   Monitoring	      10.2.0.4	Linux
+
+
+
+
+
 
 In addition to the above, Azure has provisioned a load balancer in front of all machines except for the jump box. The load balancer's targets are organized into the following availability zones:
 •	Availability Zone 1: DVWA 1 + DVWA 2
@@ -26,11 +33,17 @@ Only the jump box machine can accept connections from the Internet. Access to th
 Machines within the network can only be accessed by each other. The DVWA 1 and DVWA 2 VMs send traffic to the ELK server.
 A summary of the access policies in place can be found in the table below.
 
+
+
 Name	   Publicly Accessible	   Allowed IP Addresses
 Jump Box      yes                52.152.231.136
 ELK           No	               10.0.0.1-254
 DVWA 1  	    No                 10.0.0.1-254
 DVWA 2      	No	               10.0.0.1-254
+
+
+
+
 
 Elk Configuration
 Ansible was used to automate configuration of the ELK machine. No configuration was performed manually, which is advantageous because...
