@@ -83,4 +83,4 @@ SSH into the control node and follow the steps below:
 We have filebeat and metricbeat playbooks which are copied in the abisble container
 - _Which file do you update to make Ansible run the playbook on a specific machine? How do I specify which machine to install the ELK server on versus which to install Filebeat on?_By adding the ELK's IP to the ansible.cfg file
 - _Which URL do you navigate to in order to check that the ELK server is running?
-http://13.77.156.70:5601/app/kibana
+http://13.77.156.70:5601/app/kibana 
