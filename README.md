@@ -8,15 +8,11 @@ The configuration details of each machine may be found below.
 
 
 
-.Name	    Function	    IP Address	Operating System
-.Jump Box	 Gateway	    10.0.0.4	Linux
-.DVWA 1	  Web Server  	10.0.0.5	Linux
-.DVWA 2	 Web Server	    10.0.0.6	Linux
-.ELK	   Monitoring	      10.2.0.4	Linux
-
-
-
-
+  .Name	    Function	    IP Address	Operating System
+  .Jump Box	 Gateway	    10.0.0.4	Linux
+  .DVWA 1	  Web Server  	10.0.0.5	Linux
+  .DVWA 2	 Web Server	    10.0.0.6	Linux
+  .ELK	   Monitoring	      10.2.0.4	Linux
 
 
 In addition to the above, Azure has provisioned a load balancer in front of all machines except for the jump box. The load balancer's targets are organized into the following availability zones:
