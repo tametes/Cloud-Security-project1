@@ -10,8 +10,8 @@ The configuration details of each machine may be found below.
 
   .Name	    Function	    IP Address	Operating System
   .Jump Box	 Gateway	    10.0.0.4	Linux
-  .DVWA 1	  Web Server  	10.0.0.5	Linux
-  .DVWA 2	 Web Server	    10.0.0.6	Linux
+  .DVWA 1	  Web Server  	10.0.0.7	Linux
+  .DVWA 2	 Web Server	    10.0.0.8	Linux
   .ELK	   Monitoring	      10.2.0.4	Linux
 
 
@@ -33,9 +33,9 @@ A summary of the access policies in place can be found in the table below.
 
 Name	   Publicly Accessible	   Allowed IP Addresses
 Jump Box      yes                52.152.231.136
-ELK           No	               10.0.0.1-254
-DVWA 1  	    No                 10.0.0.1-254
-DVWA 2      	No	               10.0.0.1-254
+ELK           No	               10.2.0.4-254
+DVWA 1  	    No                 10.0.0.7-254
+DVWA 2      	No	               10.0.0.8-254
 
 
 
@@ -67,7 +67,7 @@ The following screenshot displays the result of running `docker ps` after succes
 ### Target Machines & Beats
 
 This ELK server is configured to monitor the following machines:
-- _TODO: List the IP addresses of the machines you are monitoring_10.0.0.5 10.0.0.6 10.0.0.7
+- _TODO: List the IP addresses of the machines you are monitoring_10.0.0.8 10.0.0.6 10.0.0.7
 
 We have installed the following Beats on these machines:
 - We successfully installed_filebeat and metricbeat.
@@ -84,7 +84,7 @@ In order to use the playbook, you will need to have an Ansible control node alre
 
 SSH into the control node and follow the steps below:
 - Copy the __Playbook.yml___ file to _the anisble container_in the Jump Box__.
-- Update the __the ansible.cfg___ file to include the IPs of the three machines (Web-1 10.0.0.5, Web_2 10.0.0.6, and Web_3 10.0.0.7)
+- Update the __the ansible.cfg___ file to include the IPs of the three machines (Web-1 10.0.0.8, Web_2 10.0.0.7, and Web_3 10.0.0.6)
 - Run the playbook, and navigate to _the ansible container and http://13.77.156.70:5601/app/kibana to check that the installation worked as expected.
 
  Answer the following questions to fill in the blanks:_
